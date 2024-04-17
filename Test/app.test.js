@@ -6,7 +6,7 @@ const app = require('../app');
 
 chai.use(chaiHttp);
 const expect = chai.expect;
-
+//welcome route test
 describe('Welcome Route', () => {
     it('should return status code 200', (done) => {
         chai.request(app) // Using chai-http request
