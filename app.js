@@ -13,6 +13,9 @@ app.use(function(req, res, next) {
 //import routes
 require("dotenv-flow").config();
 
+const authRoutes = require("./routes/auth");
+const itemRoutes = require("./routes/item");
+
 
 
 //Parse request Json
@@ -47,8 +50,9 @@ app.get ("/api/welcome1", (req, res) =>{
 });
 
 // routes
-app.use("/api/project", projectRoutes);
+
 app.use("/api/user", authRoutes);
+app.use("/api/item", itemRoutes);
 
 const PORT = process.env.PORT || 4000;
 
