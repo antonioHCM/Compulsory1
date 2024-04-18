@@ -8,7 +8,7 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 //GET ALL route test
 describe('Get all items', () => {
-  it('should return an array of items', (done) => {
+  it('Should return an array of items', (done) => {
     chai.request(app)
       .get('/api/item/') 
       .end((err, res) => {
@@ -21,4 +21,6 @@ describe('Get all items', () => {
   });
 
   
+  
 });
+
